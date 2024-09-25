@@ -1,6 +1,7 @@
 package com.example.myapplication
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -17,10 +18,10 @@ class MainActivity2 : AppCompatActivity() {
         builder.setTitle("Выход")
         builder.setMessage("Вы уверены что хотите выйти?")
         builder.setPositiveButton("Да") { dialog, a ->
-
+            Log.d("CLick","Yes")
         }
         builder.setNegativeButton("Нет") { dialog, a ->
-
+            Log.d("CLick","No")
         }
         val dialog = builder.create()
         dialog.show()
