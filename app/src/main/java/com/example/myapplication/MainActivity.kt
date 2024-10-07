@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.InputType
 import android.widget.Button
@@ -19,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         val editText = findViewById<EditText>(R.id.editText)
         val button = findViewById<Button>(R.id.btn)
         val login = intent.getStringExtra("Login")
+        startActivity(Intent(this, EnterActivity::class.java))
         button.setOnClickListener {
             val result = editText.text.toString()
             when(result) {
